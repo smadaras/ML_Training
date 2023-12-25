@@ -22,7 +22,7 @@ import numpy as np
 import altair as alt
 
 
-movies_2000 = pd.DataFrame.read_csv('cost_revenue_clean.csv')
+movies_2000 = pd.read_csv('cost_revenue_clean.csv')
 st.write(movies_2000)
 exit()
 st.altair_chart(alt.Chart(movies_2000))
