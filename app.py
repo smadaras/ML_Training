@@ -30,5 +30,5 @@ c = (
    .mark_circle()
 )
 
-st.altair_chart(c, use_container_width=True)
+st.altair_chart(c)
 # st.altair_chart(alt.Chart(movies_2000))
