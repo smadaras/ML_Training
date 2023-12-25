@@ -25,4 +25,11 @@ import altair as alt
 movies_2000 = pd.read_csv('cost_revenue_clean.csv')
 st.write(movies_2000)
 # exit()
-st.altair_chart(alt.Chart(movies_2000))
+c = (
+   alt.Chart(movies_2000)
+   .mark_circle()
+   .encode(x="a", y="b", size="c", color="c", tooltip=["a", "b", "c"])
+)
+
+st.altair_chart(c, use_container_width=True)
+# st.altair_chart(alt.Chart(movies_2000))
