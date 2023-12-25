@@ -27,7 +27,6 @@ st.write(movies_2000)
 # exit()
 c = (
    alt.Chart(movies_2000)
-   .mark_circle()
 )
 
 st.altair_chart(c)
