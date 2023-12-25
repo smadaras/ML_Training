@@ -1,7 +1,7 @@
 import pandas as pd
 from pandas import DataFrame
 import altair as alt
-import mpld3
+import streamlit as st
 
 movies_2000 = pd.read_csv('cost_revenue_clean.csv')
 # print(movies_2000)
