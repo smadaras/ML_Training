@@ -5,8 +5,9 @@ import streamlit as st
 
 movies_2000 = pd.read_csv('cost_revenue_clean.csv')
 # print(movies_2000)
+st.altair_chart(alt.Chart(movies_2000))
 
-
+"""
 st.altair_chart(
     alt.Chart(
         (movies_2000).mark_circle(size=100).encode(
@@ -15,3 +16,4 @@ st.altair_chart(
             tooltip=['teaching', 'citations'])
     )
 )
+"""
