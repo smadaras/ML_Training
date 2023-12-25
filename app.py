@@ -1,3 +1,4 @@
+"""
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -12,16 +13,15 @@ c = (
 )
 
 st.altair_chart(c, use_container_width=True)
-
-
 """
-import pandas as pd
-from pandas import DataFrame
-import altair as alt
+
+
 import streamlit as st
+import pandas as pd
+import altair as alt
 
-movies_2000 = pd.read_csv('cost_revenue_clean.csv')
-st.write(movies_2000)
-exit()
+
+movies_2000 = pd.DataFrame.read_csv('cost_revenue_clean.csv')
+# st.write(movies_2000)
+# exit()
 st.altair_chart(alt.Chart(movies_2000))
-"""
