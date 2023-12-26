@@ -19,7 +19,7 @@ c = (
 
 st.altair_chart(
    alt.Chart(movies_2000)
-      .mark_point()
+      .mark_point(filled = True)
       .encode(
          alt.X('production_budget_usd'),
          alt.Y('worldwide_gross_usd')
