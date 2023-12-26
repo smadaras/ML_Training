@@ -25,13 +25,13 @@ regression = LinearRegression()
 regression.fit(X, y)
 st.write(f"y = {regression.coef_[0][0]}*x + {regression.intercept_[0]}")
 # plt.plot(X, regression.predict(X), color='red', linewidth=3)
-
+Z = pd.DataFrame(regression.predict(X))
 e = (
    alt.Chart(data)
    .mark_line()
    .encode(
       alt.X('production_budget_usd'),
-      alt.Y(regression.predict(alt.X('production_budget_usd')))
+      alt.Y(Z)
    )
 )
 st.altair_chart(e, use_container_width=True)
