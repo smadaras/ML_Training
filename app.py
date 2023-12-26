@@ -29,11 +29,10 @@ data['predicted'] = regression.predict(X)
 st.write(data)
 e = (
    alt.Chart(data)
-   .mark_line()
+   .mark_line(color='#333')
    .encode(
       alt.X('production_budget_usd'),
       alt.Y('predicted')
    )
-   .color = 'red'
 )
 st.altair_chart(d + e, use_container_width=True)
