@@ -35,4 +35,4 @@ e = (
       alt.Y('predicted')
    )
 )
-st.altair_chart(e, use_container_width=True)
+st.altair_chart(d + e, use_container_width=True)
