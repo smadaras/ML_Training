@@ -14,19 +14,21 @@ y = pd.DataFrame(data, columns=['worldwide_gross_usd'])
 
 chart_data = pd.DataFrame(np.random.randn(20, 3), columns=["a", "b", "c"])
 
-c = (
+"""c = (
    alt.Chart(chart_data)
    .mark_circle()
    .encode(x="a", y="b", size="c", color="c", tooltip=["a", "b", "c"])
 )
-st.altair_chart(c, use_container_width=True)
+st.altair_chart(c, use_container_width=True)"""
 
 d = (
    alt.Chart(data)
    .mark_point(filled = True)
    .encode(
-      alt.X('production_budget_usd'),
-      alt.Y('worldwide_gross_usd')
+      #alt.X('production_budget_usd'),
+      #alt.Y('worldwide_gross_usd')
+      alt.X(X),
+      alt.Y(Y)
       )
 )
 st.altair_chart(d, use_container_width=True)
