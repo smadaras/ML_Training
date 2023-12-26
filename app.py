@@ -27,8 +27,8 @@ d = (
    .encode(
       #alt.X('production_budget_usd'),
       #alt.Y('worldwide_gross_usd')
-      alt.X(X),
-      alt.Y(Y)
+      x = X,
+      y = Y
       )
 )
 st.altair_chart(d, use_container_width=True)
