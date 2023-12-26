@@ -25,7 +25,7 @@ regression = LinearRegression()
 regression.fit(X, y)
 st.write(f"y = {regression.coef_[0][0]}*x + {regression.intercept_[0]}")
 # plt.plot(X, regression.predict(X), color='red', linewidth=3)
-Z = pd.DataFrame(regression.predict(X))
+Z = regression.predict(X)
 st.write(Z)
 e = (
    alt.Chart(data)
