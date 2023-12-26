@@ -1,13 +1,11 @@
 import streamlit as st
 import pandas as pd
-import numpy as np
+# import numpy as np
 from sklearn.linear_model import LinearRegression
-# from sklearn import datasets
 import altair as alt
 
 
 data = pd.read_csv('cost_revenue_clean.csv')
-# st.write(data)
 X = pd.DataFrame(data, columns=['production_budget_usd'])
 y = pd.DataFrame(data, columns=['worldwide_gross_usd'])
 
@@ -19,7 +17,6 @@ d = (
       alt.Y('worldwide_gross_usd')
       )
 )
-# st.altair_chart(d, use_container_width=True)
 
 regression = LinearRegression()
 regression.fit(X, y)
@@ -29,10 +26,11 @@ data['predicted'] = regression.predict(X)
 st.write(data)
 e = (
    alt.Chart(data)
-   .mark_line(color='red')
+   .mark_line(color='red', width=3)
    .encode(
       alt.X('production_budget_usd'),
       alt.Y('predicted')
    )
 )
 st.altair_chart(d + e, use_container_width=True)
+st.write(regression.score(X, y))
