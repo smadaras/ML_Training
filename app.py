@@ -29,7 +29,7 @@ d = (
       alt.Y('worldwide_gross_usd')
       )
 )
-st.altair_chart(d, use_container_width=True)
+st.altair_chart(c+d, use_container_width=True)
 
 regression = LinearRegression()
 regression.fit(X, y)
