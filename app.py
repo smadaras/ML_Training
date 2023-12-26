@@ -28,7 +28,8 @@ st.write(movies_2000)
 c = (
    alt
       .Chart(movies_2000)
-      .mark_point() 
+      .mark_point()
+      .encode()
 )
 
 st.altair_chart(c)
