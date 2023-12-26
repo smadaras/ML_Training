@@ -9,7 +9,7 @@ import altair as alt
 data = pd.read_csv('cost_revenue_clean.csv')
 st.write(data)
 X = pd.DataFrame(data, columns=['production_budget_usd'])
-Y = pd.DataFrame(data, columns=['worldwide_gross_usd'])
+y = pd.DataFrame(data, columns=['worldwide_gross_usd'])
 
 d = (
    alt.Chart(data)
