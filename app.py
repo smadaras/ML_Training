@@ -15,10 +15,8 @@ d = (
    alt.Chart(data)
    .mark_point(filled = True)
    .encode(
-      #alt.X('production_budget_usd'),
-      #alt.Y('worldwide_gross_usd')
-      x = X,
-      y = Y
+      alt.X('production_budget_usd'),
+      alt.Y('worldwide_gross_usd')
       )
 )
 st.altair_chart(d, use_container_width=True)
@@ -32,7 +30,7 @@ e = (
    alt.Chart(data)
    .mark_line()
    .encode(
-      alt.X(X),
+      alt.X('production_budget_usd'),
       alt.Y(regression.predict(X))
    )
 )
