@@ -26,7 +26,7 @@ data['predicted'] = regression.predict(X)
 st.write(data)
 e = (
    alt.Chart(data)
-   .mark_line(color='red', width=3)
+   .mark_line(color='red', width=20)
    .encode(
       alt.X('production_budget_usd'),
       alt.Y('predicted')
