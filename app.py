@@ -29,8 +29,19 @@ d = (
       alt.Y('worldwide_gross_usd')
       )
 )
-st.altair_chart(c+d, use_container_width=True)
+st.altair_chart(d, use_container_width=True)
 
 regression = LinearRegression()
 regression.fit(X, y)
 st.write(f"y = {regression.coef_[0][0]}*x + {regression.intercept_[0]}")
+# plt.plot(X, regression.predict(X), color='red', linewidth=3)
+
+e = (
+   alt.Chart(data)
+   .mark_line()
+   .encode(
+      alt.X(X),
+      alt.Y(regression.predict(X))
+   )
+)
+st.altair_chart(e, use_container_width=True)
