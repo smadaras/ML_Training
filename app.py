@@ -7,7 +7,7 @@ import altair as alt
 
 
 data = pd.read_csv('cost_revenue_clean.csv')
-st.write(data)
+# st.write(data)
 X = pd.DataFrame(data, columns=['production_budget_usd'])
 y = pd.DataFrame(data, columns=['worldwide_gross_usd'])
 
@@ -32,7 +32,7 @@ e = (
    .mark_line()
    .encode(
       alt.X('production_budget_usd'),
-      Z[1:]
+      alt.Y('predicted')
    )
 )
 st.altair_chart(e, use_container_width=True)
