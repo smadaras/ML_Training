@@ -26,7 +26,9 @@ movies_2000 = pd.read_csv('cost_revenue_clean.csv')
 st.write(movies_2000)
 # exit()
 c = (
-   alt.Chart(movies_2000)
+   alt
+      .Chart(movies_2000)
+      .mark_point() 
 )
 
 st.altair_chart(c)
