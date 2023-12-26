@@ -21,16 +21,15 @@ d = (
 regression = LinearRegression()
 regression.fit(X, y)
 st.write(f"y = {regression.coef_[0][0]}*x + {regression.intercept_[0]}")
-# plt.plot(X, regression.predict(X), color='red', linewidth=3)
 data['predicted'] = regression.predict(X)
 st.write(data)
 e = (
    alt.Chart(data)
-   .mark_line(color='red', width=20)
+   .mark_line(color='red', width=200)
    .encode(
       alt.X('production_budget_usd'),
       alt.Y('predicted')
    )
 )
 st.altair_chart(d + e, use_container_width=True)
-st.write(f"Quality of Prediction: {regression.score(X, y) * 100}%")
+st.write(f"Quality of Prediction: {int(regression.score(X, y) * 10000)/100}%")
