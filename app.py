@@ -22,4 +22,4 @@ st.altair_chart(
 
 regression = LinearRegression()
 regression.fit(X, y)
-st.write(f"y = {regression.coef_}*x + {regression.intercept_}")
+st.write(f"y = {regression.coef_[0][0]}*x + {regression.intercept_[0]}")
