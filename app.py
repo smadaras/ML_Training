@@ -19,7 +19,7 @@ d = (
       alt.Y('worldwide_gross_usd')
       )
 )
-st.altair_chart(d, use_container_width=True)
+# st.altair_chart(d, use_container_width=True)
 
 regression = LinearRegression()
 regression.fit(X, y)
@@ -34,5 +34,6 @@ e = (
       alt.X('production_budget_usd'),
       alt.Y('predicted')
    )
+   .color = 'red'
 )
 st.altair_chart(d + e, use_container_width=True)
