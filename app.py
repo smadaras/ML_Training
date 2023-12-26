@@ -31,7 +31,7 @@ e = (
    .mark_line()
    .encode(
       alt.X('production_budget_usd'),
-      alt.Y(regression.predict(X))
+      alt.Y(regression.predict(alt.X('production_budget_usd')))
    )
 )
 st.altair_chart(e, use_container_width=True)
