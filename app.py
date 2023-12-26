@@ -32,7 +32,7 @@ e = (
    .mark_line()
    .encode(
       alt.X('production_budget_usd'),
-      alt.Y(Z)
+      Z
    )
 )
 st.altair_chart(e, use_container_width=True)
