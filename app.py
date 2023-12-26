@@ -21,7 +21,7 @@ c = (
 )
 st.altair_chart(c, use_container_width=True)
 
-"""d = (
+d = (
    alt.Chart(data)
    .mark_point(filled = True)
    .encode(
@@ -29,7 +29,7 @@ st.altair_chart(c, use_container_width=True)
       alt.Y('worldwide_gross_usd')
       )
 )
-st.altair_chart(d, use_container_width=True)"""
+st.altair_chart(d, use_container_width=True)
 
 regression = LinearRegression()
 regression.fit(X, y)
