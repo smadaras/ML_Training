@@ -6,13 +6,13 @@ from sklearn.linear_model import LinearRegression
 import altair as alt
 
 
-movies_2000 = pd.read_csv('cost_revenue_clean.csv')
-st.write(movies_2000)
+data = pd.read_csv('cost_revenue_clean.csv')
+st.write(data)
 X = DataFrame(data, columns=['production_budget_usd'])
 y = DataFrame(data, columns=['worldwide_gross_usd'])
 
 st.altair_chart(
-   alt.Chart(movies_2000)
+   alt.Chart(data)
       .mark_point(filled = True)
       .encode(
          alt.X('production_budget_usd'),
