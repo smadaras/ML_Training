@@ -32,4 +32,4 @@ e = (
    )
 )
 st.altair_chart(d + e, use_container_width=True)
-st.write(f"Quality of Prediction: {int(regression.score(X, y) * 10000)/100}%")
+st.write(f"Quality of Prediction: {round(regression.score(X, y) * 100, 2)}%")
