@@ -20,12 +20,12 @@ d = (
 
 regression = LinearRegression()
 regression.fit(X, y)
-st.write(f"y = {regression.coef_[0][0]}*x + {regression.intercept_[0]}")
+st.write(f"y = {round(regression.coef_[0][0],2)}*x + {round(regression.intercept_[0],2)}")
 data['predicted'] = regression.predict(X)
 st.write(data)
 e = (
    alt.Chart(data)
-   .mark_line(color='red', width=200)
+   .mark_line(color='red', width=10)
    .encode(
       alt.X('production_budget_usd'),
       alt.Y('predicted')
