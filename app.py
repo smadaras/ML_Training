@@ -30,7 +30,7 @@ e = (
       alt.X('production_budget_usd'),
       alt.Y('predicted')
    )
-   strokeWidth=alt.value(14)
+   .strokeWidth=alt.value(14)
 )
 st.altair_chart(d + e, use_container_width=True)
 st.write(f"Quality of Prediction: {round(regression.score(X, y) * 100, 2)}%")
