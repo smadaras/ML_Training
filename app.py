@@ -25,12 +25,11 @@ data['predicted'] = regression.predict(X)
 st.write(data)
 e = (
    alt.Chart(data)
-   .mark_line(color='red', linewidth=10)
+   .mark_line(color='red', width=10)
    .encode(
       alt.X('production_budget_usd'),
       alt.Y('predicted')
    )
-   #.strokeWidth=alt.value(14)
 )
 st.altair_chart(d + e, use_container_width=True)
 st.write(f"Quality of Prediction: {round(regression.score(X, y) * 100, 2)}%")
