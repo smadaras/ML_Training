@@ -46,8 +46,7 @@ chartA = (
       alt.Y('LSD_ppm'))
    .properties(
       title = "Tissue concentration of LSD over time")
-)
-chartA.configure_title(fontSize = 40)
+).configure_title(fontSize = 40)
 
 st.altair_chart(chartA, use_container_width=True)
 
