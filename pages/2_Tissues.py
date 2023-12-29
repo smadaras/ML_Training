@@ -6,7 +6,7 @@ import altair as alt
 
 
 data = pd.read_csv('lsd_math_score_data.csv')
-st.write(data)
+st.write(data.describe())
 """X = pd.DataFrame(data, columns=['production_budget_usd'])
 y = pd.DataFrame(data, columns=['worldwide_gross_usd'])
 
