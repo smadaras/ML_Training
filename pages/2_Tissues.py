@@ -47,8 +47,8 @@ chartA = (
       alt.Y('LSD_ppm')
    )
    .configure_axis(
-      # labelFontSize=40,
-      titleFontSize=40
+      labelFontSize=40
+      # titleFontSize=40
    )
 )
 st.altair_chart(chartA, use_container_width=True)
