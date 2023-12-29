@@ -21,12 +21,25 @@ plt.yticks(fontsize=14)
 plt.ylim(1,7)
 plt.xlim(0,500)
 
-plt.style.use('classic')"""
+plt.style.use('classic')
+
+alt.Chart(
+   iowa,
+   title=alt.Title(
+       "Iowa's green energy boom",
+       subtitle="A growing share of the state's energy has come from renewable sources"
+   )
+).mark_area().encode(
+    x="year:T",
+    y=alt.Y("net_generation:Q").stack("normalize"),
+    color="source:N"
+)"""
+
 
 chartA = ( 
    alt.Chart(
       data, 
-      title = alt.Title("Tissue concentration of LSD over time")
+      title = alt.Title("Tissue concentration of LSD over time", subtitle ="Sub")
    )
    .mark_line(color='#e74c3c', strokeWidth=3)
    .encode(
