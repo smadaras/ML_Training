@@ -21,13 +21,10 @@ plt.yticks(fontsize=14)
 plt.ylim(1,7)
 plt.xlim(0,500)
 
-plt.style.use('classic')
-
-plt.plot(time, LSD, color='#e74c3c', linewidth=3)
-plt.show()"""
+plt.style.use('classic')"""
 
 chartA = ( 
-   alt.Chart(data)
+   alt.Chart(data, title="Tissue concentration of LSD over time")
    .mark_line(color='#e74c3c', strokeWidth=3)
    .encode(
       alt.X('Time_Delay_in_Minutes'),
@@ -36,19 +33,7 @@ chartA = (
 )
 st.altair_chart(chartA, use_container_width=True)
 
-"""X = pd.DataFrame(data, columns=['production_budget_usd'])
-y = pd.DataFrame(data, columns=['worldwide_gross_usd'])
-
-d = (
-   alt.Chart(data)
-   .mark_line(filled = True)
-   .encode(
-      alt.X('production_budget_usd'),
-      alt.Y('worldwide_gross_usd')
-      )
-)
-
-regression = LinearRegression()
+"""regression = LinearRegression()
 regression.fit(X, y)
 st.write(f"y = {round(regression.coef_[0][0],2)}*x + {round(regression.intercept_[0],2)}")
 data['predicted'] = regression.predict(X)
