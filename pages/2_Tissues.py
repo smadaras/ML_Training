@@ -7,6 +7,35 @@ import altair as alt
 
 data = pd.read_csv('lsd_math_score_data.csv')
 st.write(data.describe())
+time = data[['Time_Delay_in_Minutes']]
+LSD = data[['LSD_ppm']]
+score = data[['Avg_Math_Test_Score']]
+
+"""plt.title('Tissue concentration of LSD over time', fontsize=17)
+plt.xlabel('Time in Minutes', fontsize=14)
+plt.ylabel('Tissue LSD ppm', fontsize=14)
+plt.text(x=0, y=-0.5, s='Wagner et al. (1968)', fontsize=12)
+plt.xticks(fontsize=14)
+plt.yticks(fontsize=14)
+
+plt.ylim(1,7)
+plt.xlim(0,500)
+
+plt.style.use('classic')
+
+plt.plot(time, LSD, color='#e74c3c', linewidth=3)
+plt.show()"""
+
+chartA = ( 
+   alt.Chart(data)
+   .mark_point(filled = True)
+   .encode(
+      alt.X('Time_Delay_in_Minutes'),
+      alt.Y('LSD_ppm')
+   )
+)
+st.altair_chart(chartA, use_container_width=True)
+
 """X = pd.DataFrame(data, columns=['production_budget_usd'])
 y = pd.DataFrame(data, columns=['worldwide_gross_usd'])
 
