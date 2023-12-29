@@ -26,7 +26,7 @@ plt.style.use('classic')"""
 chartA = ( 
    alt.Chart(
       data, 
-      alt.Title(
+      title = alt.Title(
          "Tissue concentration of LSD over time", 
          fontsize=17
       )
