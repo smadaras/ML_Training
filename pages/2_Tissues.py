@@ -39,17 +39,15 @@ alt.Chart(
 chartA = ( 
    alt.Chart(
       data, 
-      title = "Tissue concentration of LSD over time"
-   )
-   .mark_line(color='#e74c3c', strokeWidth=3)
+      title = "Tissue concentration of LSD over time")
+   .mark_line(
+      color = '#e74c3c', 
+      strokeWidth = 3)
    .encode(
       alt.X('Time_Delay_in_Minutes'),
       alt.Y('LSD_ppm')
    )
-   .configure_axis(
-      labelFontSize=40
-      # titleFontSize=40
-   )
+   .configure_title(fontSize = 40)
 )
 st.altair_chart(chartA, use_container_width=True)
 
