@@ -26,10 +26,7 @@ plt.style.use('classic')"""
 chartA = ( 
    alt.Chart(
       data, 
-      title = alt.Title(
-         "Tissue concentration of LSD over time", 
-         fontsize=17
-      )
+      title = alt.Title("Tissue concentration of LSD over time")
    )
    .mark_line(color='#e74c3c', strokeWidth=3)
    .encode(
