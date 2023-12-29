@@ -28,7 +28,7 @@ plt.show()"""
 
 chartA = ( 
    alt.Chart(data)
-   .mark_point(filled = True)
+   .mark_line(color='#e74c3c', strokeWidth=3)
    .encode(
       alt.X('Time_Delay_in_Minutes'),
       alt.Y('LSD_ppm')
@@ -41,7 +41,7 @@ y = pd.DataFrame(data, columns=['worldwide_gross_usd'])
 
 d = (
    alt.Chart(data)
-   .mark_point(filled = True)
+   .mark_line(filled = True)
    .encode(
       alt.X('production_budget_usd'),
       alt.Y('worldwide_gross_usd')
