@@ -11,8 +11,7 @@ time = data[['Time_Delay_in_Minutes']]
 LSD = data[['LSD_ppm']]
 score = data[['Avg_Math_Test_Score']]
 
-"""plt.title('Tissue concentration of LSD over time', fontsize=17)
-plt.xlabel('Time in Minutes', fontsize=14)
+"""plt.xlabel('Time in Minutes', fontsize=14)
 plt.ylabel('Tissue LSD ppm', fontsize=14)
 plt.text(x=0, y=-0.5, s='Wagner et al. (1968)', fontsize=12)
 plt.xticks(fontsize=14)
@@ -21,19 +20,7 @@ plt.yticks(fontsize=14)
 plt.ylim(1,7)
 plt.xlim(0,500)
 
-plt.style.use('classic')
-
-alt.Chart(
-   iowa,
-   title=alt.Title(
-       "Iowa's green energy boom",
-       subtitle="A growing share of the state's energy has come from renewable sources"
-   )
-).mark_area().encode(
-    x="year:T",
-    y=alt.Y("net_generation:Q").stack("normalize"),
-    color="source:N"
-)"""
+plt.style.use('classic')"""
 
 
 chartA = ( 
@@ -46,7 +33,9 @@ chartA = (
       alt.Y('LSD_ppm'))
    .properties(
       title = "Tissue concentration of LSD over time")
-).configure_title(fontSize = 40)
+)
+.configure_title(
+   fontSize = 40)
 
 st.altair_chart(chartA, use_container_width=True)
 
