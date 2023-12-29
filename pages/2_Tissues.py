@@ -48,7 +48,7 @@ chartA = (
    )
    .configure_axis(
       labelFontSize=20,
-      titleFontSize=20
+      titleFontSize=40
    )
 )
 st.altair_chart(chartA, use_container_width=True)
