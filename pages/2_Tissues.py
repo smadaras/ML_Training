@@ -24,7 +24,7 @@ plt.xlim(0,500)
 plt.style.use('classic')"""
 
 chartA = ( 
-   alt.Chart(data, title="Tissue concentration of LSD over time")
+   alt.Chart(data, title="Tissue concentration of LSD over time", fontsize=17)
    .mark_line(color='#e74c3c', strokeWidth=3)
    .encode(
       alt.X('Time_Delay_in_Minutes'),
