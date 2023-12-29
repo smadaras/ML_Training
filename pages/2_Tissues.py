@@ -37,16 +37,15 @@ alt.Chart(
 
 
 chartA = ( 
-   alt.Chart(
-      data, 
-      title = "Tissue concentration of LSD over time")
+   alt.Chart(data)
    .mark_line(
       color = '#e74c3c', 
       strokeWidth = 3)
    .encode(
       alt.X('Time_Delay_in_Minutes'),
-      alt.Y('LSD_ppm')
-   )
+      alt.Y('LSD_ppm'))
+   .properties(
+      title = "Tissue concentration of LSD over time")
 )
 chartA.configure_title(fontSize = 40)
 
