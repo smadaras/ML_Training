@@ -47,8 +47,9 @@ chartA = (
       alt.X('Time_Delay_in_Minutes'),
       alt.Y('LSD_ppm')
    )
-   .configure_title(fontSize = 40)
 )
+chartA.configure_title(fontSize = 40)
+
 st.altair_chart(chartA, use_container_width=True)
 
 """regression = LinearRegression()
