@@ -37,8 +37,7 @@ chartA = (
       alt.X(
          'Time_Delay_in_Minutes', 
          title = "Time Delay (min)",
-         axis=alt.Axis(tickSize = 10)
-         #tickSize = 10
+         axis=alt.Axis(tickSize = 40)
       ).scale(domain=(0, 500)),
       alt.Y(
          'LSD_ppm', 
