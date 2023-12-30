@@ -13,8 +13,7 @@ LSD = data[['LSD_ppm']]
 score = data[['Avg_Math_Test_Score']]
 
 """plt.xticks(fontsize=14)
-plt.yticks(fontsize=14)
-plt.style.use('classic')"""
+plt.yticks(fontsize=14)"""
 
 
 chartA = ( 
@@ -37,7 +36,7 @@ chartA = (
       alt.X(
          'Time_Delay_in_Minutes', 
          title = "Time Delay (min)",
-         axis=alt.Axis(tickSize = 40, tickColor = 'yellow')
+         axis = alt.Axis(tickSize = 40, tickColor = 'yellow')
       ).scale(domain=(0, 500)),
       alt.Y(
          'LSD_ppm', 
@@ -49,14 +48,11 @@ chartA = (
 
 chartSum = chartA
 
-themes = sorted(alt.themes.names())
-for theme in themes:
-   alt.themes.enable(theme)
-   st.altair_chart(
-      chartSum, 
-      use_container_width=True
-   )
-   st.write(theme)
+alt.themes.enable('None')
+st.altair_chart(
+   chartSum, 
+   use_container_width=True
+)
 
 current_time = datetime.now().strftime("%H:%M:%S")
 st.write(f"Current Time = {current_time}")
