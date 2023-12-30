@@ -41,8 +41,8 @@ chartB = alt.Chart().mark_text(
     fontWeight=600,
     color='coral'
 ).encode(
-    x=alt.value(200),  # pixels from left
-    y=alt.value(200),  # pixels from top
+    x=alt.value(410),  # pixels from left
+    y=alt.value(290),  # pixels from top
     text=alt.value(["Wagner et al. (1968)"])
 )
 
