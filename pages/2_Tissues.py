@@ -56,10 +56,10 @@ for theme in themes:
       chartSum, 
       use_container_width=True
    )
+   st.write(theme)
 
 current_time = datetime.now().strftime("%H:%M:%S")
 st.write(f"Current Time = {current_time}")
-st.write(alt.themes.names())
 
 """regression = LinearRegression()
 regression.fit(X, y)
