@@ -34,10 +34,9 @@ chartA = (
    .properties(
       title = "Tissue concentration of LSD over time")
 )
-.configure_title(
+chartSum = chartA.configure_title(
    fontSize = 40)
-
-st.altair_chart(chartA, use_container_width=True)
+st.altair_chart(chartSum, use_container_width=True)
 
 """regression = LinearRegression()
 regression.fit(X, y)
