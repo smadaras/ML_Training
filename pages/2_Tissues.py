@@ -51,7 +51,7 @@ st.altair_chart(
    chartSum, 
    use_container_width=True
 )
-st.write("rel. 103")
+st.write("rel. 104")
 
 """regression = LinearRegression()
 regression.fit(X, y)
