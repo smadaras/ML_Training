@@ -34,7 +34,7 @@ chartA = (
       title = "Tissue concentration of LSD over time")
 )
 
-chartB = alt.Chart().mark_text(
+"""chartB = alt.Chart().mark_text(
     align="left",
     baseline="bottom",
     fontSize=14,
@@ -44,10 +44,9 @@ chartB = alt.Chart().mark_text(
     x=alt.value(410),  # pixels from left
     y=alt.value(290),  # pixels from top
     text=alt.value(["Wagner et al. (1968)"])
-)
+)"""
 
-chartSum = chartA.configure_title(
-   fontSize = 40)
+chartSum = chartA.configure_title(fontSize = 40)
 st.altair_chart(chartSum, use_container_width=True)
 
 """regression = LinearRegression()
