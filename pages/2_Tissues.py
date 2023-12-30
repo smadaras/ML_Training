@@ -11,14 +11,8 @@ time = data[['Time_Delay_in_Minutes']]
 LSD = data[['LSD_ppm']]
 score = data[['Avg_Math_Test_Score']]
 
-"""
-plt.text(x=0, y=-0.5, s='Wagner et al. (1968)', fontsize=12)
-plt.xticks(fontsize=14)
+"""plt.xticks(fontsize=14)
 plt.yticks(fontsize=14)
-
-plt.ylim(1,7)
-plt.xlim(0,500)
-
 plt.style.use('classic')"""
 
 
@@ -30,6 +24,7 @@ chartA = (
          fontSize = 30,
          subtitle=["Wagner et al. (1968)"],
          subtitleColor = 'red',
+         subtitleFontSize = 20,
          anchor='start',
          orient='bottom',
          offset=20))
@@ -41,21 +36,9 @@ chartA = (
       alt.Y('LSD_ppm', title = "LDS Concentrate (ppm)").scale(domain=(1, 7)))
 )
 
-"""chartB = alt.Chart().mark_text(
-    align="left",
-    baseline="bottom",
-    fontSize=14,
-    fontWeight=600,
-    color='coral'
-).encode(
-    x=alt.value(410),  # pixels from left
-    y=alt.value(290),  # pixels from top
-    text=alt.value(["Wagner et al. (1968)"])
-)"""
-
 chartSum = chartA
 st.altair_chart(chartSum, use_container_width=True)
-st.write("rel. 101")
+st.write("rel. 102")
 
 """regression = LinearRegression()
 regression.fit(X, y)
