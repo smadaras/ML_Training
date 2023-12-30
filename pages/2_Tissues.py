@@ -23,15 +23,21 @@ plt.style.use('classic')"""
 
 
 chartA = ( 
-   alt.Chart(data)
+   alt.Chart(data, title=alt.Title(
+       "Iowa's green energy boom",
+       subtitle=["A growing share of the state's energy", "has come from renewable sources"],
+       anchor='start',
+       orient='bottom',
+       offset=20)
+            )
    .mark_line(
       color = '#e74c3c', 
       strokeWidth = 3)
    .encode(
       alt.X('Time_Delay_in_Minutes', title = "Time Delay (min)").scale(domain=(0, 500)),
       alt.Y('LSD_ppm', title = "LDS Concentrate (ppm)").scale(domain=(1, 7)))
-   .properties(
-      title = "Tissue concentration of LSD over time")
+   # .properties(
+   #    title = "Tissue concentration of LSD over time")
 )
 
 """chartB = alt.Chart().mark_text(
@@ -46,7 +52,7 @@ chartA = (
     text=alt.value(["Wagner et al. (1968)"])
 )"""
 
-chartSum = chartA.configure_title(fontSize = 40)
+chartSum = chartA #.configure_title(fontSize = 40)
 st.altair_chart(chartSum, use_container_width=True)
 
 """regression = LinearRegression()
