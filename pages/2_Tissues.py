@@ -27,18 +27,31 @@ chartA = (
          subtitleFontSize = 20,
          anchor='start',
          orient='bottom',
-         offset=20))
-   .mark_line(
+         offset=20
+      )
+   ).mark_line(
       color = '#e74c3c', 
-      strokeWidth = 3)
-   .encode(
-      alt.X('Time_Delay_in_Minutes', title = "Time Delay (min)").scale(domain=(0, 500)),
-      alt.Y('LSD_ppm', title = "LDS Concentrate (ppm)").scale(domain=(1, 7)))
+      strokeWidth = 3
+   ).encode(
+      alt.X(
+         'Time_Delay_in_Minutes', 
+         title = "Time Delay (min)",
+         tickSize = 10
+      ).scale(domain=(0, 500)),
+      alt.Y(
+         'LSD_ppm', 
+         title = "LSD Concentrate (ppm)",
+         tickSize = 10
+      ).scale(domain=(1, 7))
+   )
 )
 
 chartSum = chartA
-st.altair_chart(chartSum, use_container_width=True)
-st.write("rel. 102")
+st.altair_chart(
+   chartSum, 
+   use_container_width=True
+)
+st.write("rel. 103")
 
 """regression = LinearRegression()
 regression.fit(X, y)
