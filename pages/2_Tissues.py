@@ -30,7 +30,7 @@ chartA = (
       strokeWidth = 3)
    .encode(
       alt.X('Time_Delay_in_Minutes', title = "Time Delay (min)"),
-      alt.Y('LSD_ppm'))
+      alt.Y('LSD_ppm', title = "LDS Concentrate (ppm)"))
    .properties(
       title = "Tissue concentration of LSD over time")
 )
