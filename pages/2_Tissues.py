@@ -3,6 +3,7 @@ import pandas as pd
 # import numpy as np
 from sklearn.linear_model import LinearRegression
 import altair as alt
+from datetime import datetime
 
 
 data = pd.read_csv('lsd_math_score_data.csv')
@@ -52,7 +53,9 @@ st.altair_chart(
    chartSum, 
    use_container_width=True
 )
-st.write("rel. 104")
+
+current_time = datetime.now().strftime("%H:%M:%S")
+st.write(f"Current Time = {current_time}")
 
 """regression = LinearRegression()
 regression.fit(X, y)
