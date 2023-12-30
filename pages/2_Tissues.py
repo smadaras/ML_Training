@@ -36,7 +36,7 @@ chartA = (
 )
 chartSum = chartA.configure_title(
    fontSize = 40)
-   .configure_axisX(
+chartSum = chartA.configure_axisX(
       title = "Time Delay (min)"
    )
 st.altair_chart(chartSum, use_container_width=True)
