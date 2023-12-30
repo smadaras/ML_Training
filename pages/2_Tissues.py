@@ -36,8 +36,7 @@ chartA = (
    ).encode(
       alt.X(
          'Time_Delay_in_Minutes', 
-         title = "Time Delay (min)",
-         tickColor = 'red'
+         title = "Time Delay (min)"
          #tickSize = 10
       ).scale(domain=(0, 500)),
       alt.Y(
