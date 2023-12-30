@@ -16,7 +16,7 @@ score = data[['Avg_Math_Test_Score']]
 plt.yticks(fontsize=14)
 plt.style.use('classic')"""
 
-
+alt.themes.enable('opaque')
 chartA = ( 
    alt.Chart(
       data, 
