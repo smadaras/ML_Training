@@ -28,8 +28,8 @@ chartA = (
       color = '#e74c3c', 
       strokeWidth = 3)
    .encode(
-      alt.X('Time_Delay_in_Minutes', title = "Time Delay (min)"),
-      alt.Y('LSD_ppm', title = "LDS Concentrate (ppm)"))
+      alt.X('Time_Delay_in_Minutes', title = "Time Delay (min)").scale(domain=(0, 500)),
+      alt.Y('LSD_ppm', title = "LDS Concentrate (ppm)").scale(domain=(1, 7)))
    .properties(
       title = "Tissue concentration of LSD over time")
 )
