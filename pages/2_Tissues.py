@@ -40,8 +40,8 @@ chartA = (
       ).scale(domain=(0, 500)),
       alt.Y(
          'LSD_ppm', 
-         title = "LSD Concentrate (ppm)"
-         #tickSize = 10
+         title = "LSD Concentrate (ppm)",
+         tickSize = 20
       ).scale(domain=(1, 7))
    )
 )
