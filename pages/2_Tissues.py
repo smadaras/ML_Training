@@ -35,12 +35,12 @@ chartA = (
    ).encode(
       alt.X(
          'Time_Delay_in_Minutes', 
-         title = "Time Delay (min)",
+         title = "Time Delay (min)"
          #tickSize = 10
       ).scale(domain=(0, 500)),
       alt.Y(
          'LSD_ppm', 
-         title = "LSD Concentrate (ppm)",
+         title = "LSD Concentrate (ppm)"
          #tickSize = 10
       ).scale(domain=(1, 7))
    )
