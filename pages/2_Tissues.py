@@ -36,12 +36,11 @@ chartA = (
       alt.X(
          'Time_Delay_in_Minutes', 
          title = "Time Delay (min)",
-         axis = alt.Axis(tickSize = 40, tickColor = 'yellow')
+         axis = alt.Axis(tickSize = 0, tickColor = 'yellow')
       ).scale(domain=(0, 500)),
       alt.Y(
          'LSD_ppm', 
-         title = "LSD Concentrate (ppm)",
-         tickSize = 20
+         title = "LSD Concentrate (ppm)"
       ).scale(domain=(1, 7))
    )
 )
