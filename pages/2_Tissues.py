@@ -12,10 +12,6 @@ time = data[['Time_Delay_in_Minutes']]
 LSD = data[['LSD_ppm']]
 score = data[['Avg_Math_Test_Score']]
 
-"""plt.xticks(fontsize=14)
-plt.yticks(fontsize=14)"""
-
-
 chartA = ( 
    alt.Chart(
       data, 
@@ -23,7 +19,7 @@ chartA = (
          "Tissue concentration of LSD over time",
          fontSize = 30,
          subtitle=["Wagner et al. (1968)"],
-         subtitleColor = 'red',
+         subtitleColor = 'grey',
          subtitleFontSize = 20,
          anchor='start',
          orient='bottom',
@@ -36,11 +32,7 @@ chartA = (
       alt.X(
          'Time_Delay_in_Minutes', 
          title = "Time Delay (min)",
-         axis = alt.Axis(
-            tickCount = 10, 
-            labelOverlap=False
-            # tickSize, tickWidth, tickColor are not implemented
-         )
+         axis = alt.Axis(tickCount = 10) # tickSize, tickWidth, tickColor are not implemented
       ).scale(domain=(0, 500)),
       alt.Y(
          'LSD_ppm', 
@@ -54,7 +46,7 @@ chartSum = chartA
 alt.themes.enable('none')
 st.altair_chart(
    chartSum, 
-   use_container_width=True
+   use_container_width = True
 )
 
 current_time = datetime.now().strftime("%H:%M:%S")
