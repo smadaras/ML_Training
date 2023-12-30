@@ -27,7 +27,9 @@ chartA = (
       data, 
       title=alt.Title(
          "Tissue concentration of LSD over time",
+         fontSize = 30,
          subtitle=["Wagner et al. (1968)"],
+         subtitleColor = 'red',
          anchor='start',
          orient='bottom',
          offset=20))
@@ -53,7 +55,7 @@ chartA = (
 
 chartSum = chartA
 st.altair_chart(chartSum, use_container_width=True)
-st.write("rel.100")
+st.write("rel. 101")
 
 """regression = LinearRegression()
 regression.fit(X, y)
