@@ -16,7 +16,7 @@ score = data[['Avg_Math_Test_Score']]
 plt.yticks(fontsize=14)
 plt.style.use('classic')"""
 
-alt.themes.enable('urbaninstitute')
+
 chartA = ( 
    alt.Chart(
       data, 
@@ -48,10 +48,14 @@ chartA = (
 )
 
 chartSum = chartA
-st.altair_chart(
-   chartSum, 
-   use_container_width=True
-)
+
+themes = sorted(alt.themes.names())
+for theme in themes:
+   alt.themes.enable(theme)
+   st.altair_chart(
+      chartSum, 
+      use_container_width=True
+   )
 
 current_time = datetime.now().strftime("%H:%M:%S")
 st.write(f"Current Time = {current_time}")
