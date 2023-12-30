@@ -46,7 +46,7 @@ chartA = (
     text=alt.value(["Wagner et al. (1968)"])
 )"""
 
-chartA.configure_title(fontSize = 40)
+# chartA.configure_title(fontSize = 40)
 st.altair_chart(chartA, use_container_width=True)
 
 """regression = LinearRegression()
