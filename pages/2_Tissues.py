@@ -48,7 +48,7 @@ chartA = (
 
 chartSum = chartA
 
-alt.themes.enable('None')
+alt.themes.enable('none')
 st.altair_chart(
    chartSum, 
    use_container_width=True
