@@ -55,6 +55,7 @@ st.altair_chart(
 
 current_time = datetime.now().strftime("%H:%M:%S")
 st.write(f"Current Time = {current_time}")
+st.write(alt.themes.names())
 
 """regression = LinearRegression()
 regression.fit(X, y)
