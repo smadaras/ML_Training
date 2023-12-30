@@ -47,7 +47,7 @@ chartB = alt.Chart().mark_text(
 )
 
 chartSum = chartA.configure_title(
-   fontSize = 40) + chartB
+   fontSize = 40)
 st.altair_chart(chartSum, use_container_width=True)
 
 """regression = LinearRegression()
