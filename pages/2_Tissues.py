@@ -29,15 +29,13 @@ chartA = (
       color = '#e74c3c', 
       strokeWidth = 3)
    .encode(
-      alt.X('Time_Delay_in_Minutes'),
+      alt.X('Time_Delay_in_Minutes', title = "Time Delay (min)"),
       alt.Y('LSD_ppm'))
    .properties(
       title = "Tissue concentration of LSD over time")
 )
 chartSum = chartA.configure_title(
-   fontSize = 40).configure_axisX(
-      title = "Time Delay (min)"
-   )
+   fontSize = 40)
 st.altair_chart(chartSum, use_container_width=True)
 
 """regression = LinearRegression()
