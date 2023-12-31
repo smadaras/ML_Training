@@ -85,6 +85,11 @@ chartC = (
    )
 )
 chartSum = chartB + chartC
+chartSum.configure_header(
+    title = "Arithmetic vs LSD-25",
+    titleColor='green',
+    titleFontSize=17,
+)
 chartSum.configure_axis(
     labelFontSize = 14
 )
