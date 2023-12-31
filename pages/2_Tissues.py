@@ -69,13 +69,14 @@ chartB = (
 )
 chartC = (
    alt.Chart(data)
-   .mark_line(color='red', strokeWidth=10)
+   .mark_line(color='red', strokeWidth=3)
    .encode(
       alt.X('LSD_ppm'),
       alt.Y('predicted_score')
    )
 )
 chartSum = chartB + chartC
+alt.themes.enable('fivethirtyeight')
 st.altair_chart(chartSum, use_container_width=True)
 st.write(f"Quality of Prediction: {round(regr.score(LSD, score) * 100, 2)}%")
 
@@ -91,6 +92,4 @@ plt.xlim(1, 6.5)
 plt.style.use('fivethirtyeight')
 
 plt.scatter(LSD, score, color='blue', s=100, alpha=0.7)
-plt.plot(LSD, predicted_score, color='red', linewidth=3)
-plt.show()
 """
