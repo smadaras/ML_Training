@@ -74,8 +74,7 @@ chartB = (
          'Avg_Math_Test_Score',
          title = 'Performance Score'
          ).scale(domain=(25,85))
-   )
-)
+   ).properties(title='Cars Data')
 chartC = (
    alt.Chart(data)
    .mark_line(color='red', strokeWidth=3)
@@ -87,11 +86,11 @@ chartC = (
 chartSum = chartB + chartC
 
 chartSum.configure_title(
-    titleColor='green',
-    titleFontSize=17,
+   titleColor='green',
+   titleFontSize=17,
 )
 chartSum.configure_axis(
-    labelFontSize = 14
+   labelFontSize = 14
 )
 alt.themes.enable('fivethirtyeight')
 st.altair_chart(chartSum, use_container_width=True)
