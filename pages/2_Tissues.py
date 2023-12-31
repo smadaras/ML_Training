@@ -80,6 +80,9 @@ chartB.configure_title(
    titleColor='green',
    titleFontSize=17,
 )
+chartB.configure_axis(
+   labelFontSize = 14
+)
 
 chartC = (
    alt.Chart(data)
@@ -93,9 +96,6 @@ chartC = (
 chartSum = chartB + chartC
 
 
-chartSum.configure_axis(
-   labelFontSize = 14
-)
 alt.themes.enable('fivethirtyeight')
 st.altair_chart(chartSum, use_container_width=True)
 st.write(f"Quality of Prediction: {round(regr.score(LSD, score) * 100, 2)}%")
