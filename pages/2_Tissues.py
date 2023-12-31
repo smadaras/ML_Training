@@ -68,8 +68,8 @@ chartB = (
       title = alt.Title(
          "Arithmetic vs LSD-25",
          fontSize = 17)
-   .mark_point(color='blue', filled=True)
-   .encode(
+   ).mark_point(color='blue', filled=True
+   ).encode(
       alt.X(
          'LSD_ppm',
          title = "Tissue LSD ppm"
