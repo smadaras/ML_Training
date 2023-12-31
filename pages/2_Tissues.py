@@ -66,7 +66,9 @@ chartB = (
       alt.X(
          'LSD_ppm',
          title = "Tissue LSD ppm"),
-      alt.Y('Avg_Math_Test_Score')
+      alt.Y(
+         'Avg_Math_Test_Score',
+         title = 'Performance Score')
    )
 )
 chartC = (
