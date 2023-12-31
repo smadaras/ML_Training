@@ -80,15 +80,7 @@ chartB = (
          ).scale(domain=(25,85))
    )
 )
-"""
-chartB.configure_title(
-   titleColor='green',
-   titleFontSize=17,
-)
-chartB.configure_axis(
-   labelFontSize = 14
-)
-"""
+
 chartC = (
    alt.Chart(data)
    .mark_line(color='red', strokeWidth=3)
