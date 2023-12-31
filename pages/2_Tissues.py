@@ -55,6 +55,7 @@ st.write('Intercept: ', regr.intercept_[0])
 st.write('R-Square: ', regr.score(LSD, score))
 predicted_score = regr.predict(LSD)
 data['predicted_score'] = regr.predict(LSD)
+# score = data[['Avg_Math_Test_Score']]
 st.write(data)
 # st.write('Predicted Score: ', predicted_score)
 
@@ -67,7 +68,7 @@ chartB = (
    )
 )
 st.altair_chart(chartB, use_container_width=True)
-st.write(f"Quality of Prediction: {round(regr.score(X, y) * 100, 2)}%")
+st.write(f"Quality of Prediction: {round(regr.score(LSD, predicted_score) * 100, 2)}%")
 
 current_time = datetime.now().strftime("%H:%M:%S")
 st.write(f"Current Time = {current_time}")
