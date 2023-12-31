@@ -61,7 +61,7 @@ st.write(data)
 
 chartB = (
    alt.Chart(data)
-   .mark_line(color='blue', strokeWidth=10)
+   .mark_point(color='blue', filled=True)
    .encode(
       alt.X('LSD_ppm'),
       alt.Y('Avg_Math_Test_Score')
