@@ -65,10 +65,10 @@ chartB = (
    .encode(
       alt.X(
          'LSD_ppm',
-         title = "Tissue LSD ppm"),
+         title = "Tissue LSD ppm").scale(domain=(1,6.5)),
       alt.Y(
          'Avg_Math_Test_Score',
-         title = 'Performance Score')
+         title = 'Performance Score').scale(domain=(25,85))
    )
 )
 chartC = (
