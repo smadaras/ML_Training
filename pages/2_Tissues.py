@@ -68,7 +68,7 @@ chartB = (
    )
 )
 st.altair_chart(chartB, use_container_width=True)
-st.write(f"Quality of Prediction: {round(regr.score(LSD, predicted_score) * 100, 2)}%")
+st.write(f"Quality of Prediction: {round(regr.score(LSD, score) * 100, 2)}%")
 
 current_time = datetime.now().strftime("%H:%M:%S")
 st.write(f"Current Time = {current_time}")
