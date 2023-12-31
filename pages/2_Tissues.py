@@ -61,15 +61,36 @@ st.write(data)
 
 chartB = (
    alt.Chart(data)
+   .mark_line(color='blue', strokeWidth=10)
+   .encode(
+      alt.X('LSD_ppm'),
+      alt.Y('Avg_Math_Test_Score')
+   )
+)
+chartC = (
+   alt.Chart(data)
    .mark_line(color='red', strokeWidth=10)
    .encode(
       alt.X('LSD_ppm'),
       alt.Y('predicted_score')
    )
 )
-st.altair_chart(chartB, use_container_width=True)
+chartSum = chartB + chartC
+st.altair_chart(chartSum, use_container_width=True)
 st.write(f"Quality of Prediction: {round(regr.score(LSD, score) * 100, 2)}%")
 
 current_time = datetime.now().strftime("%H:%M:%S")
 st.write(f"Current Time = {current_time}")
 
+"""
+plt.title('Arithmetic vs LSD-25', fontsize=17)
+plt.xlabel('Tissue LSD ppm', fontsize=14)
+plt.ylabel('Performance Score', fontsize=14)
+plt.ylim(25, 85)
+plt.xlim(1, 6.5)
+plt.style.use('fivethirtyeight')
+
+plt.scatter(LSD, score, color='blue', s=100, alpha=0.7)
+plt.plot(LSD, predicted_score, color='red', linewidth=3)
+plt.show()
+"""
