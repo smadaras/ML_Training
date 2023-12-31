@@ -5,7 +5,6 @@ from sklearn.linear_model import LinearRegression
 import altair as alt
 from datetime import datetime
 
-
 data = pd.read_csv('lsd_math_score_data.csv')
 st.write(data.describe())
 time = data[['Time_Delay_in_Minutes']]
@@ -48,6 +47,14 @@ st.altair_chart(
    chartSum, 
    use_container_width = True
 )
+
+regr = LinearRegression()
+regr.fit(LSD, score)
+st.write('Theta1 : ', regr.coef_[0][0])
+st.write('Intercept: ', regr.intercept_[0])
+st.write('R-Square: ', regr.score(LSD, score))
+predicted_score = regr.predict(LSD)
+st.write('Predicted Score: ', predicted_score)
 
 current_time = datetime.now().strftime("%H:%M:%S")
 st.write(f"Current Time = {current_time}")
