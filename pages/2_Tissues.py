@@ -68,15 +68,19 @@ chartB = (
       title = alt.Title(
          "Arithmetic vs LSD-25",
          fontSize = 17)
-   ).mark_point(color='blue', filled=True
+   ).mark_point(
+      color='blue', 
+      filled=True
    ).encode(
       alt.X(
          'LSD_ppm',
-         title = "Tissue LSD ppm"
+         title = "Tissue LSD ppm",
+         fontSize = 14
          ).scale(domain=(1,6.5)),
       alt.Y(
          'Avg_Math_Test_Score',
-         title = 'Performance Score'
+         title = 'Performance Score',
+         fontSize = 14
          ).scale(domain=(25,85))
    )
 )
@@ -100,7 +104,6 @@ st.write(f"Quality of Prediction: {round(regr.score(LSD, score) * 100, 2)}%")
 
 
 """
-plt.title('Arithmetic vs LSD-25', fontsize=17)
 plt.xlabel('Tissue LSD ppm', fontsize=14)
 plt.ylabel('Performance Score', fontsize=14)
 
