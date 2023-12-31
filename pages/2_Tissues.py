@@ -58,21 +58,17 @@ data['predicted_score'] = regr.predict(LSD)
 st.write(data)
 # st.write('Predicted Score: ', predicted_score)
 
-current_time = datetime.now().strftime("%H:%M:%S")
-st.write(f"Current Time = {current_time}")
-
-"""regression = LinearRegression()
-regression.fit(X, y)
-st.write(f"y = {round(regression.coef_[0][0],2)}*x + {round(regression.intercept_[0],2)}")
-data['predicted'] = regression.predict(X)
-st.write(data)
-e = (
+chartB = (
    alt.Chart(data)
    .mark_line(color='red', strokeWidth=10)
    .encode(
-      alt.X('production_budget_usd'),
-      alt.Y('predicted')
+      alt.X('LSD_ppm'),
+      alt.Y('predicted_score')
    )
 )
-st.altair_chart(d + e, use_container_width=True)
-st.write(f"Quality of Prediction: {round(regression.score(X, y) * 100, 2)}%")"""
+st.altair_chart(chartB, use_container_width=True)
+st.write(f"Quality of Prediction: {round(regr.score(X, y) * 100, 2)}%")
+
+current_time = datetime.now().strftime("%H:%M:%S")
+st.write(f"Current Time = {current_time}")
+
