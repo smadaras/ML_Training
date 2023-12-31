@@ -72,9 +72,7 @@ chartB = (
    ).encode(
       alt.X(
          'LSD_ppm',
-         title = alt.Title(
-            "Tissue LSD ppm",
-            fontSize = 14)
+         title = "Tissue LSD ppm"
          ).scale(domain=(1,6.5)),
       alt.Y(
          'Avg_Math_Test_Score',
