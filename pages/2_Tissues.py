@@ -63,7 +63,7 @@ current_time = datetime.now().strftime("%H:%M:%S")
 st.write(f"Current Time = {current_time}")
 
 chartB = (
-   alt.Chart(data, title = "Arithmetic vs LSD-25")
+   alt.Chart(data)
    .mark_point(color='blue', filled=True)
    .encode(
       alt.X(
@@ -74,7 +74,7 @@ chartB = (
          'Avg_Math_Test_Score',
          title = 'Performance Score'
          ).scale(domain=(25,85))
-   ).properties(title='Cars Data')
+   ).properties(title="Arithmetic vs LSD-25")
 )
 chartC = (
    alt.Chart(data)
