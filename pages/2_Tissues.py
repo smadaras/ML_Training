@@ -63,7 +63,9 @@ chartB = (
    alt.Chart(data)
    .mark_point(color='blue', filled=True)
    .encode(
-      alt.X('LSD_ppm'),
+      alt.X(
+         'LSD_ppm',
+         title = "Tissue LSD ppm"),
       alt.Y('Avg_Math_Test_Score')
    )
 )
