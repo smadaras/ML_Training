@@ -63,7 +63,7 @@ current_time = datetime.now().strftime("%H:%M:%S")
 st.write(f"Current Time = {current_time}")
 
 chartB = (
-   alt.Chart(data)
+   alt.Chart(data, title = "Arithmetic vs LSD-25")
    .mark_point(color='blue', filled=True)
    .encode(
       alt.X(
@@ -86,7 +86,6 @@ chartC = (
 )
 chartSum = chartB + chartC
 chartSum.configure_header(
-    title = "Arithmetic vs LSD-25",
     titleColor='green',
     titleFontSize=17,
 )
