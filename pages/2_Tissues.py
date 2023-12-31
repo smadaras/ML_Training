@@ -75,6 +75,7 @@ chartB = (
          title = 'Performance Score'
          ).scale(domain=(25,85))
    ).properties(title='Cars Data')
+)
 chartC = (
    alt.Chart(data)
    .mark_line(color='red', strokeWidth=3)
