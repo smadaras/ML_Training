@@ -66,12 +66,12 @@ chartB = (
       alt.X(
          'LSD_ppm',
          title = "Tissue LSD ppm",
-         # fontSize = 14
+         titleFontSize = 14
          ).scale(domain=(1,6.5)),
       alt.Y(
          'Avg_Math_Test_Score',
          title = 'Performance Score',
-         # fontSize = 14
+         titleFontSize = 14
          ).scale(domain=(25,85))
    )
 )
