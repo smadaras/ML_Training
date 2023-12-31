@@ -65,10 +65,14 @@ chartB = (
    .encode(
       alt.X(
          'LSD_ppm',
-         title = "Tissue LSD ppm").scale(domain=(1,6.5)),
+         title = "Tissue LSD ppm",
+         fontSize = 14
+         ).scale(domain=(1,6.5)),
       alt.Y(
          'Avg_Math_Test_Score',
-         title = 'Performance Score').scale(domain=(25,85))
+         title = 'Performance Score',
+         fontSize = 14
+         ).scale(domain=(25,85))
    )
 )
 chartC = (
@@ -91,9 +95,6 @@ st.write(f"Current Time = {current_time}")
 plt.title('Arithmetic vs LSD-25', fontsize=17)
 plt.xlabel('Tissue LSD ppm', fontsize=14)
 plt.ylabel('Performance Score', fontsize=14)
-plt.ylim(25, 85)
-plt.xlim(1, 6.5)
-plt.style.use('fivethirtyeight')
 
 plt.scatter(LSD, score, color='blue', s=100, alpha=0.7)
 """
