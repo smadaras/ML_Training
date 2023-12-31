@@ -76,6 +76,11 @@ chartB = (
          ).scale(domain=(25,85))
    ).properties(title="Arithmetic vs LSD-25")
 )
+chartB.configure_title(
+   titleColor='green',
+   titleFontSize=17,
+)
+
 chartC = (
    alt.Chart(data)
    .mark_line(color='red', strokeWidth=3)
@@ -84,12 +89,10 @@ chartC = (
       alt.Y('predicted_score')
    )
 )
+
 chartSum = chartB + chartC
 
-chartSum.configure_title(
-   titleColor='green',
-   titleFontSize=17,
-)
+
 chartSum.configure_axis(
    labelFontSize = 14
 )
