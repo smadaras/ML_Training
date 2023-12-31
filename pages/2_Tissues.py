@@ -85,10 +85,11 @@ chartC = (
    )
 )
 chartSum = chartB + chartC
-chartSum.configure_header(
+
+"""chartSum.configure_header(
     titleColor='green',
     titleFontSize=17,
-)
+)"""
 chartSum.configure_axis(
     labelFontSize = 14
 )
