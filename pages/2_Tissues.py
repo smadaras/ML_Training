@@ -63,7 +63,11 @@ current_time = datetime.now().strftime("%H:%M:%S")
 st.write(f"Current Time = {current_time}")
 
 chartB = (
-   alt.Chart(data, title="Arithmetic vs LSD-25")
+   alt.Chart(
+      data, 
+      title = alt.Title(
+         "Arithmetic vs LSD-25",
+         fontSize = 17)
    .mark_point(color='blue', filled=True)
    .encode(
       alt.X(
