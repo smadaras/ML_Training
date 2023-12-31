@@ -59,19 +59,20 @@ data['predicted_score'] = regr.predict(LSD)
 st.write(data)
 # st.write('Predicted Score: ', predicted_score)
 
+current_time = datetime.now().strftime("%H:%M:%S")
+st.write(f"Current Time = {current_time}")
+
 chartB = (
    alt.Chart(data)
    .mark_point(color='blue', filled=True)
    .encode(
       alt.X(
          'LSD_ppm',
-         title = "Tissue LSD ppm",
-         titleFontSize = 14
+         title = "Tissue LSD ppm"
          ).scale(domain=(1,6.5)),
       alt.Y(
          'Avg_Math_Test_Score',
-         title = 'Performance Score',
-         titleFontSize = 14
+         title = 'Performance Score'
          ).scale(domain=(25,85))
    )
 )
@@ -84,12 +85,14 @@ chartC = (
    )
 )
 chartSum = chartB + chartC
+chartSum.configure_axis(
+    labelFontSize = 14
+)
 alt.themes.enable('fivethirtyeight')
 st.altair_chart(chartSum, use_container_width=True)
 st.write(f"Quality of Prediction: {round(regr.score(LSD, score) * 100, 2)}%")
 
-current_time = datetime.now().strftime("%H:%M:%S")
-st.write(f"Current Time = {current_time}")
+
 
 """
 plt.title('Arithmetic vs LSD-25', fontsize=17)
