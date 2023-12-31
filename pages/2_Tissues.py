@@ -70,15 +70,15 @@ chartB = (
          fontSize = 17)
    ).mark_point(
       color='blue', 
-      filled=True
+      filled=True # pointsize?
    ).encode(
       alt.X(
          'LSD_ppm',
-         title = "Tissue LSD ppm"
+         title = 'Tissue LSD ppm' # fontsize?
          ).scale(domain=(1,6.5)),
       alt.Y(
          'Avg_Math_Test_Score',
-         title = 'Performance Score'
+         title = 'Performance Score' # fontsize?
          ).scale(domain=(25,85))
    )
 )
@@ -98,12 +98,3 @@ chartSum = chartB + chartC
 alt.themes.enable('fivethirtyeight')
 st.altair_chart(chartSum, use_container_width=True)
 st.write(f"Quality of Prediction: {round(regr.score(LSD, score) * 100, 2)}%")
-
-
-
-"""
-plt.xlabel('Tissue LSD ppm', fontsize=14)
-plt.ylabel('Performance Score', fontsize=14)
-
-plt.scatter(LSD, score, color='blue', s=100, alpha=0.7)
-"""
