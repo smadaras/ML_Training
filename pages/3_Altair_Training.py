@@ -16,12 +16,8 @@ st.altair_chart(
     use_container_width = True
 )
 
-st.write(
-    """
-chartA = alt.Chart(cars).mark_point().encode(
-    x='Horsepower',
-    y='Miles_per_Gallon',
-    color='Origin',
-).interactive()
-"""
-)
+st.write("chartA = alt.Chart(cars).mark_point().encode("+"\n"
+    +"    x='Horsepower',"+"\n"
+    +"    y='Miles_per_Gallon',"+"\n"
+    +"    color='Origin',"+"\n"
++").interactive()")
