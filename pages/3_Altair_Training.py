@@ -1,5 +1,9 @@
 import altair as alt
 import streamlit as st
+from datetime import datetime
+
+current_time = datetime.now().strftime("%H:%M:%S")
+st.write(f"Current Time = {current_time}")
 
 # load a simple dataset as a pandas DataFrame
 from vega_datasets import data
@@ -26,3 +30,4 @@ alt.Chart(cars).mark_point().encode(
 st.code(code,language='python')
 
 st.write(f"Type of alt.Chart(cars): {type(alt.Chart(cars))}")
+st.write(f"Type of alt.Chart(cars).mark_point(): {type(alt.Chart(cars).mark_point())}")
