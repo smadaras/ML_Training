@@ -29,6 +29,4 @@ alt.Chart(cars).mark_point().encode(
 """
 st.code(code,language='python')
 
-st.write(f"Type of alt.Chart(cars): {type(alt.Chart(cars))}")
-st.write(f"Type of alt.Chart(cars).mark_point(): {type(alt.Chart(cars).mark_point())}")
-st.write(f"Type of alt.Chart(cars).mark_point().encode().interactive(): {type(alt.Chart(cars).mark_point().encode(x='Horsepower',y='Miles_per_Gallon',color='Origin').interactive())}")
+st.write(f"Type of alt.Chart() and all its derivatives: {type(alt.Chart(cars))}")
