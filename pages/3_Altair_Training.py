@@ -29,4 +29,11 @@ alt.Chart(cars).mark_point().encode(
 """
 st.code(code,language='python')
 
-st.write(f"Type of alt.Chart() and all its derivatives: {type(alt.Chart(cars))}")
+st.write("Explicit indication of data types with :_ suffix:")
+text = """
+'b:N' indicates a nominal type (unordered, categorical data),
+'b:O' indicates an ordinal type (rank-ordered data),
+'b:Q' indicates a quantitative type (numerical data with meaningful magnitudes), and
+'b:T' indicates a temporal type (date/time data)
+"""
+st.write(text)
