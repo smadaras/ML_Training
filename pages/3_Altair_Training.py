@@ -29,7 +29,7 @@ alt.Chart(cars).mark_point().encode(
 """
 st.code(code,language='python')
 
-st.write("Explicit indication of data types with :_ suffix:")
+st.text("Explicit indication of data types with :_ suffix:")
 text = """
 'b:N' indicates a nominal type (unordered, categorical data),
 'b:O' indicates an ordinal type (rank-ordered data),
