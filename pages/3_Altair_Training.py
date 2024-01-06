@@ -31,7 +31,7 @@ st.code(code,language='python')
 
 st.text("Explicit indication of data types with :_ suffix:")
 text = """
-'b:N' indicates a nominal type (unordered, categorical data),
+\'b:N\' indicates a nominal type (unordered, categorical data),
 'b:O' indicates an ordinal type (rank-ordered data),
 'b:Q' indicates a quantitative type (numerical data with meaningful magnitudes), and
 'b:T' indicates a temporal type (date/time data)
